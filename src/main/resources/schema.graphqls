@@ -1,0 +1,20 @@
+type Query {
+    getStuff(id: ID!): Stuff!
+    getAuthenticatedStuff(id: ID!): Stuff!
+    getReadOnlyStuff(id: ID!): Stuff!
+    getWriteStuff(id: ID!): Stuff!
+}
+
+type Stuff {
+    name: String!
+    subStuff: SubStuff!
+    extraStuff: ExtraStuff
+}
+
+type SubStuff {
+    subName: String!
+}
+
+type ExtraStuff {
+    extraName: String!
+}

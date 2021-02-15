@@ -1,0 +1,14 @@
+server.port: 4000
+
+graphql:
+  servlet:
+    # warning: all errors shown in response with error type
+    # if it's disabled, then most errors are shown as Internal Error
+    # Must provide custom handlers @ExceptionHandler({MyException.class,...}) that returns GraphQLError
+    exception-handlers-enabled: true
+  playground:
+    headers:
+      MOCK_AUTHORITY: read,write
+
+#logging.level:
+#  org.springframework.security: debug
